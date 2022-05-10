@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply inline-block rounded-lg py-2 px-4 font-semibold transition;
+  }
+
+  .btn-primary {
+    @apply bg-primaryBg text-white shadow-md hover:bg-[#12488D] focus:outline-none focus:ring-2 focus:ring-[#12488D] focus:ring-opacity-75;
+  }
+
+  .btn-secondary {
+    @apply border border-[#8A8A8A] hover:border-[#323232];
+  }
+}
+
+@layer utilities {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+}
