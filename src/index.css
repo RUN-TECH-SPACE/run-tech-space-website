@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Aktiv Grotesk";
+  src: url("../public/AktivGroteskCorp-Regular.ttf");
+}
+
 body {
   font-family: "Sora", sans-serif;
 }
@@ -17,6 +22,7 @@ h4 {
 
 p {
   color: #8a8a8a;
+  font-family: "Aktiv Grotesk";
 }
 
 @layer components {
@@ -25,7 +31,7 @@ p {
   }
 
   .btn {
-    @apply inline-block rounded-lg py-2 px-4 font-semibold transition;
+    @apply inline-block rounded-lg py-2 px-4 font-sora transition;
   }
 
   .btn-primary {

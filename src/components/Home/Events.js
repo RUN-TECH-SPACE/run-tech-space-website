@@ -37,8 +37,8 @@ function Events() {
           ))}
         </div>
 
-        <div className='mt-12 flex'>
-          <div className='space-y-2'>
+        <div className='mt-12 flex flex-col gap-12 md:flex-row'>
+          <div className='order-2 flex-1 space-y-2'>
             <p>
               <span className='my-auto mr-2 inline-block h-2 w-2 rounded-full bg-[#D73B3B]'></span>
               July 23, 2022
@@ -56,8 +56,11 @@ function Events() {
             <button>Read More</button>
           </div>
 
-          {/* <img src='' alt='' /> */}
-          <div className='max-w-96 h-96 w-full rounded-[50px] bg-[#EBEBEB]'></div>
+          <img
+            src='/images/hackathon.png'
+            alt='hackathon'
+            className=' order-1 h-full rounded-[50px] md:order-2'
+          />
         </div>
       </div>
     </section>

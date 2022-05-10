@@ -4,11 +4,15 @@ import Button from "../Button";
 function Hero() {
   return (
     <header className='container grid gap-3 py-20 md:grid-cols-2'>
-      <div className='order-2 self-center md:order-1'>
-        <h1 className='text-3xl font-semibold md:text-4xl lg:text-6xl'>
-          Learn <span>tech skills</span> that would groom your career
+      <div className='order-2 space-y-3 self-center md:order-1'>
+        <h1 className='text-3xl font-semibold md:text-4xl lg:max-w-[627px] lg:text-6xl lg:leading-[76px]'>
+          Learn{" "}
+          <span className='bg-[url(../public/images/hero-line.svg)] bg-bottom bg-no-repeat'>
+            tech skills
+          </span>{" "}
+          that would groom your career
         </h1>
-        <p className='lg:text-2xl'>
+        <p className=' lg:text-2xl'>
           Be a member of the community and stand a chance to build your tech
           career with the help of our amazing tutors.
         </p>

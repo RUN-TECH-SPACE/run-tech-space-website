@@ -3,7 +3,7 @@ import Button from "./Button";
 
 function Navigation() {
   return (
-    <nav className='border-b-2 border-lightGrey'>
+    <nav className='border-b-2 border-lightGrey py-3'>
       <div className='container flex items-center justify-between '>
         <img src='/images/logo.svg' alt='RUN Tech Space' />
 
