@@ -9,34 +9,37 @@ function Stacks() {
       btn: "Join Frontend Development",
     },
     {
-      title: "Frontend development",
+      title: "UI & UX Design",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
-      btn: "Join Frontend Development",
+      btn: "Join UI & UX Design",
     },
     {
-      title: "Frontend development",
+      title: "Artificial Intelligence & Data Science",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
-      btn: "Join Frontend Development",
+      btn: "Join AI & Data Science",
     },
   ];
   return (
-    <section>
-      <h2 className='text-center text-4xl'>Community Stacks</h2>
+    <section className='container py-20'>
+      <h2 className='heading2'>Community Stacks</h2>
 
-      {data.map((item, index) => (
-        <div className='grid gap-6 md:grid-cols-2'>
-          <div className='item-center even:order-2'>
-            <React.Fragment key={index}>
-              <h3>{item.title}</h3>
+      <div className='mt-20 space-y-20'>
+        {data.map((item, index) => (
+          <div className=' grid gap-6 odd:order-2 md:grid-cols-2'>
+            <div
+              key={index}
+              className='item-center self-center even:bg-slate-500'
+            >
+              <h3 className='mb-3 md:text-3xl'>{item.title}</h3>
               <p>{item.text}</p>
 
-              <Button>{item.btn}</Button>
-            </React.Fragment>
-          </div>
+              <Button className='mt-5'>{item.btn}</Button>
+            </div>
 
-          <div className='max-w-96 h-96 w-full bg-[#F9F9F9]'></div>
-        </div>
-      ))}
+            <div className='max-w-96 h-96 w-full bg-[#F9F9F9] '></div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

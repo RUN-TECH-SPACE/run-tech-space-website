@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from "../components/Footer";
+import Events from "../components/Home/Events";
 import Hero from "../components/Home/Hero";
 import Partners from "../components/Home/Partners";
 import Stacks from "../components/Home/Stacks";
@@ -9,10 +11,12 @@ function Home() {
     <>
       <Navigation />
       <Hero />
-      <main className='container'>
+      <main>
         <Partners />
         <Stacks />
+        <Events />
       </main>
+      <Footer />
     </>
   );
 }
