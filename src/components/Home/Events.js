@@ -44,7 +44,7 @@ function Events() {
               July 23, 2022
             </p>
             <h3 className='text-3xl font-semibold'>2022/23 Hackathon</h3>
-            <p className=''>
+            <p className='text-lg'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed
               ac nec pellentesque. Etiam quam volutpat, nisl quam massa
               consequat at facilisi. Nisi cursus pharetra integer eu. Commodo

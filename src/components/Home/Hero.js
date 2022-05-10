@@ -5,7 +5,7 @@ function Hero() {
   return (
     <header className='container grid gap-3 py-20 md:grid-cols-2'>
       <div className='order-2 space-y-3 self-center md:order-1'>
-        <h1 className='text-3xl font-semibold md:text-4xl lg:max-w-[627px] lg:text-6xl lg:leading-[76px]'>
+        <h1 className='text-3xl font-semibold leading-[46px] md:text-4xl md:leading-[46px] lg:max-w-[627px] lg:text-6xl lg:leading-[76px]'>
           Learn{" "}
           <span className='bg-[url(../public/images/hero-line.svg)] bg-bottom bg-no-repeat'>
             tech skills
@@ -17,7 +17,9 @@ function Hero() {
           career with the help of our amazing tutors.
         </p>
 
-        <Button>Become a member</Button>
+        <Button type='link' href='/join_us'>
+          Become a member
+        </Button>
       </div>
 
       <img

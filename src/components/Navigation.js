@@ -1,21 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "./Button";
+import CustomLink from "./CustomLink";
 
 function Navigation() {
   return (
     <nav className='border-b-2 border-lightGrey py-3'>
       <div className='container flex items-center justify-between '>
-        <img src='/images/logo.svg' alt='RUN Tech Space' />
+        <Link to='/'>
+          <img src='/images/logo.svg' alt='RUN Tech Space' />
+        </Link>
 
         <ul className='flex space-x-8'>
-          <li>Stacks</li>
-          <li>About</li>
+          <li>
+            <a href='/#stacks'>Stacks</a>
+          </li>
+          <li>
+            <CustomLink to='/about'>About</CustomLink>
+          </li>
           <li>Donate</li>
         </ul>
 
-        <div className='gap-4'>
+        <div className='space-x-4'>
           <Button type='secondary'>Join us on WhatsApp</Button>
-          <Button type='primary'>Join us</Button>
+          <Button type='link' href='/join_us'>
+            Join us
+          </Button>
         </div>
       </div>
     </nav>

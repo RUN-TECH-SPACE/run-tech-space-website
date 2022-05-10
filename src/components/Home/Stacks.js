@@ -23,24 +23,24 @@ function Stacks() {
     },
   ];
   return (
-    <section className='container py-20'>
+    <section className='container py-20' id='stacks'>
       <h2 className='heading2'>Community Stacks</h2>
 
-      <div className='mt-20 flex flex-col space-y-20  md:grid-cols-2'>
+      <div className='mt-20 flex flex-col  space-y-20 md:grid-cols-2'>
         {data.map((item, index) => (
-          <div className='grid gap-12 md:grid-cols-2'>
-            <div key={index} className='item-center self-center '>
-              <h3 className='mb-3 font-semibold md:text-3xl'>{item.title}</h3>
-              <p>{item.text}</p>
-
-              <Button className='mt-5'>{item.btn}</Button>
-            </div>
-
+          <div className='stacks grid gap-12 md:grid-cols-2 '>
             <img
               src={item.image}
               alt=''
-              className='self-end justify-self-end'
+              className='w-full self-end justify-self-end md:order-2'
             />
+
+            <div key={index} className='item-center self-center '>
+              <h3 className='mb-3 font-semibold md:text-3xl'>{item.title}</h3>
+              <p className='text-lg font-normal'>{item.text}</p>
+
+              <Button className='mt-5'>{item.btn}</Button>
+            </div>
           </div>
         ))}
       </div>

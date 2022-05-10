@@ -9,6 +9,10 @@
   src: url("../public/AktivGroteskCorp-Regular.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Sora", sans-serif;
 }
@@ -20,9 +24,18 @@ h4 {
   color: #323232;
 }
 
-p {
+p,
+label,
+ol {
   color: #8a8a8a;
   font-family: "Aktiv Grotesk";
+}
+
+.stacks:nth-child(even) > div {
+  @apply md:order-2;
+}
+.stacks:nth-child(even) img {
+  @apply md:justify-self-start;
 }
 
 @layer components {
@@ -31,7 +44,7 @@ p {
   }
 
   .btn {
-    @apply inline-block rounded-lg py-2 px-4 font-sora transition;
+    @apply inline-block rounded-lg py-3 px-6 font-sora transition;
   }
 
   .btn-primary {
