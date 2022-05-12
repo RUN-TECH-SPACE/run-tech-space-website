@@ -20,9 +20,9 @@ function success() {
         </div>
 
         <div className='relative col-span-12 p-12 md:col-span-8'>
-          <h2 className='heading2'>You're in!</h2>
+          <h2 className='heading2'>You're In!</h2>
           <p className='text-center'>
-            You're officially now a member of{" "}
+            You're officially now a member of
             <span className='text-[#1253A6]'>RUN Tech Space</span>.
           </p>
 
