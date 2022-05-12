@@ -45,9 +45,11 @@ function Footer() {
                 "/images/linkedin.svg",
                 "/images/twitter.svg",
               ].map((img, ind) => (
-                <a key={ind} href='/#'>
-                  <img src={img} alt='icon' />
-                </a>
+                <Link key={ind} href='/#'>
+                  <a>
+                    <img src={img} alt='icon' />
+                  </a>
+                </Link>
               ))}
             </div>
             <p>support@runtechspace.com</p>

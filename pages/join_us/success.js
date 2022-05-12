@@ -13,7 +13,7 @@ function success() {
         <div className='col-span-12 h-fit bg-[#1253A6] bg-[url(../public/images/joinUsBg.png)] bg-cover bg-no-repeat p-12 md:col-span-4 md:block md:h-auto'>
           <Link href='/'>
             <a className='inline-flex items-center gap-3 text-white'>
-              <img src='/images/arrow-left.svg' alt='' />
+              <img src='/images/arrow-left.svg' alt='' aria-hidden='true' />
               Return to Homepage
             </a>
           </Link>
