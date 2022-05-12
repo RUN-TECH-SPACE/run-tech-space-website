@@ -33,11 +33,10 @@ function Button({ type, children, className, href, ...props }) {
       )}
 
       {type === "link" && (
-        <Link
-          href={href}
-          className={`btn btn-primary ${className ? className : ""}`}
-        >
-          {children}
+        <Link href={href}>
+          <a className={`btn btn-primary ${className ? className : ""}`}>
+            {children}
+          </a>
         </Link>
       )}
     </>

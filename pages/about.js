@@ -1,4 +1,4 @@
-import React from "react";
+import Head from "next/head";
 import Benefits from "../components/About/Benefits";
 import Hero from "../components/About/Hero";
 import JoinUs from "../components/About/JoinUs";
@@ -25,6 +25,15 @@ function About() {
 
   return (
     <>
+      <Head>
+        <title>About - RUN Tech Space</title>
+        <meta
+          name='description'
+          content='Providing students the ability to think creatively and build
+            innovative solutions to global problems'
+        />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <Navigation />
       <Hero />
       <main>

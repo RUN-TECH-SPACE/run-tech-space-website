@@ -40,7 +40,7 @@ ol {
 
 @layer components {
   .heading2 {
-    @apply text-center text-4xl font-semibold;
+    @apply text-center text-2xl font-semibold md:text-4xl;
   }
 
   .btn {

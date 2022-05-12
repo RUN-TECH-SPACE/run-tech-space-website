@@ -36,10 +36,12 @@ function Stacks() {
             />
 
             <div key={index} className='item-center self-center '>
-              <h3 className='mb-3 font-semibold md:text-3xl'>{item.title}</h3>
-              <p className='text-lg font-normal'>{item.text}</p>
+              <h3 className='mb-3 text-xl font-semibold md:text-3xl'>
+                {item.title}
+              </h3>
+              <p className='font-normal md:text-lg'>{item.text}</p>
 
-              <Button className='mt-5'>{item.btn}</Button>
+              <Button className='mt-5 text-sm md:text-base'>{item.btn}</Button>
             </div>
           </div>
         ))}

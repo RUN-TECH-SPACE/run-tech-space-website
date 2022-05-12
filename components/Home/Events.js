@@ -24,9 +24,9 @@ function Events() {
       <div className='container'>
         <h2 className='heading2'>Events</h2>
 
-        <div className='mt-20 gap-8 md:flex md:justify-between'>
+        <div className='mt-12 gap-8 md:mt-20 md:flex md:justify-between'>
           {onGoingEvents.map((item, index) => (
-            <div key={index} className='space-y-2'>
+            <div key={index} className='space-y-2 even:my-10 md:even:my-0'>
               <p>
                 <span className='my-auto mr-2 inline-block h-2 w-2 rounded-full bg-[#D73B3B] '></span>
                 {item.tag}
