@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Listbox } from "@headlessui/react";
 
 const stacks = [
-  { id: 1, name: "Frontend Development", unavailable: false },
-  { id: 2, name: "UI & UX Design", unavailable: false },
-  { id: 3, name: "Al  & Data Science", unavailable: false },
+  { name: "Frontend Development" },
+  { name: "UI & UX Design" },
+  { name: "Al & Data Science" },
 ];
 
 function StackSelect({ selectedStack, setSelectedStack }) {
@@ -30,9 +30,9 @@ function StackSelect({ selectedStack, setSelectedStack }) {
         </Listbox.Button>
 
         <Listbox.Options className='absolute mt-1 w-full overflow-hidden rounded-[10px] bg-[#F9F9F9] shadow-md'>
-          {stacks.map((stack) => (
+          {stacks.map((stack, ind) => (
             <Listbox.Option
-              key={stack.id}
+              key={ind}
               value={stack}
               disabled={stack.unavailable}
               className={({ active, selected }) =>

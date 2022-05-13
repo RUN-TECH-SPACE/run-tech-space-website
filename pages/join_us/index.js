@@ -11,26 +11,11 @@ import StackSelect from "../../components/StackSelect";
 function JoinUs() {
   const [loading, setLoading] = useState(false);
   const [selectedStack, setSelectedStack] = useState([]);
-  const [stacks, setStacks] = useState([
-    {
-      id: "fd",
-      active: false,
-    },
-    {
-      id: "ui",
-      active: false,
-    },
-    {
-      id: "ai",
-      active: false,
-    },
-  ]);
+  const [stackFd, setStackFd] = useState(false);
+  const [stackUi, setStackUi] = useState(false);
+  const [stackAi, setStackAi] = useState(false);
 
   const router = useRouter();
-
-  useEffect(() => {
-    console.log(stacks);
-  }, [stacks]);
 
   const {
     register,
@@ -39,9 +24,23 @@ function JoinUs() {
   } = useForm();
 
   const onSubmit = (data) => {
+    const stack = [
+      stackFd && {
+        name: "Frontend Development",
+      },
+      stackUi && {
+        name: "UI & UX Design",
+      },
+      stackAi
+        ? {
+            name: "Al & Data Science",
+          }
+        : "",
+    ];
+
     const payload = {
       ...data,
-      stack: selectedStack,
+      stack: selectedStack.length ? selectedStack : stack,
     };
 
     console.log(payload);
@@ -67,17 +66,6 @@ function JoinUs() {
     //     setLoading(false);
     //   }
     // );
-  };
-
-  const handleClick = (e) => {
-    const option = {
-      id: e.target.id,
-      active: !stacks.find((stack) => stack.id === e.target.id).active,
-    };
-
-    console.log(option);
-
-    setStacks([...stacks, option]);
   };
 
   return (
@@ -147,17 +135,37 @@ function JoinUs() {
                 <Button
                   type='select'
                   id='fd'
-                  onClick={handleClick}
+                  onClick={() => setStackFd(!stackFd)}
                   className={`${
-                    stacks[0].id === "fd" && stacks[0].active ? "bg-red" : ""
-                  }`}
+                    stackFd
+                      ? "bg-[#1253A6] text-white hover:border-[#1253A6] "
+                      : "text-[#1253A6]"
+                  } border-2 border-lightGrey`}
                 >
                   Front // Backend Development
                 </Button>
-                <Button type='select' id='ui' onClick={handleClick}>
+                <Button
+                  type='select'
+                  id='ui'
+                  onClick={() => setStackUi(!stackUi)}
+                  className={`${
+                    stackUi
+                      ? "bg-[#1253A6] text-white hover:border-[#1253A6] "
+                      : "text-[#1253A6]"
+                  } border-2 border-lightGrey`}
+                >
                   UI & UX Design
                 </Button>
-                <Button type='select' id='ai' onClick={handleClick}>
+                <Button
+                  type='select'
+                  id='ai'
+                  onClick={() => setStackAi(!stackAi)}
+                  className={`${
+                    stackAi
+                      ? "bg-[#1253A6] text-white hover:border-[#1253A6] "
+                      : "text-[#1253A6]"
+                  } border-2 border-lightGrey`}
+                >
                   Al & Data Science
                 </Button>
               </div>

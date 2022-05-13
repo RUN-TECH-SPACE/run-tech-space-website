@@ -25,7 +25,7 @@ function Button({ type, children, className, href, ...props }) {
         <button
           type='button'
           {...props}
-          className={`btn btn-secondary ${className ? className : ""}`}
+          className={`btn ${className ? className : ""}`}
         >
           {children}
         </button>
