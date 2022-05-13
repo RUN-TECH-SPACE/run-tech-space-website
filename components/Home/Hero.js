@@ -7,7 +7,9 @@ function Hero() {
       <div className='order-2 space-y-3 self-center md:order-1'>
         <h1 className='text-3xl font-semibold leading-[46px] md:text-4xl md:leading-[46px] lg:max-w-[627px] lg:text-6xl lg:leading-[76px]'>
           Learn{" "}
-          <span className='bg-[url(../public/images/hero-line.svg)] bg-no-repeat pb-2 [background-position:_0_33px] lg:bg-bottom lg:pb-0'>
+          <span
+            className={`heroLine bg-no-repeat pb-2 [background-position:_0_33px] lg:bg-bottom lg:pb-0`}
+          >
             tech skills
           </span>{" "}
           that would groom your career

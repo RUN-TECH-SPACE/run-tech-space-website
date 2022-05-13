@@ -1,15 +1,15 @@
 import React from "react";
-import Link from "next/link"
+import Link from "next/link";
 
 function Footer() {
   return (
     <footer className='my-12 pt-20'>
       <div className='container'>
-        <div className='mb-16 grid md:grid-cols-12 md:gap-5'>
+        <div className='mb-16 grid grid-cols-12 md:gap-5'>
           <img
             src='/images/logo.svg'
             alt='RUN Tech Space'
-            className=' col-span-12 md:col-span-3'
+            className='col-span-12 mx-auto md:col-span-3 md:ml-0'
           />
 
           <div className='col-span-6 mt-10 md:col-span-3  md:mt-0'>

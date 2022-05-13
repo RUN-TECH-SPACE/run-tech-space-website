@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
@@ -9,9 +9,26 @@ import { useRouter } from "next/router";
 
 function JoinUs() {
   const [loading, setLoading] = useState(false);
-  const [stacks, setStacks] = useState([]);
-  const [stacksSelected, setStacksSelected] = useState([]);
+  const [stacks, setStacks] = useState([
+    {
+      id: "fd",
+      active: false,
+    },
+    {
+      id: "ui",
+      active: false,
+    },
+    {
+      id: "ai",
+      active: false,
+    },
+  ]);
+
   const router = useRouter();
+
+  useEffect(() => {
+    console.log(stacks);
+  }, [stacks]);
 
   const {
     register,
@@ -45,8 +62,21 @@ function JoinUs() {
   };
 
   const handleClick = (e) => {
-    if (stacks.length === 2) return;
-    setStacks((prevState) => [...prevState, e.target.innerText]);
+    const option = {
+      id: e.target.id,
+      active: !stacks.find((stack) => stack.id === e.target.id).active,
+    };
+
+    console.log(option);
+
+    // setStacks((prevState) => (
+    //   [
+    //   ...stacks,
+    //   {
+    //     id: e.target.id,
+    //     active: !stacks.find((stack) => stack.id === e.target.id).active,
+    //   },
+    // ]);
   };
 
   return (
@@ -113,7 +143,14 @@ function JoinUs() {
               <p>Select stack(s) - Maximum of two stacks</p>
 
               <div className='mt-2 flex flex-col justify-between gap-3 md:flex-row'>
-                <Button type='select' id='fd' onClick={handleClick}>
+                <Button
+                  type='select'
+                  id='fd'
+                  onClick={handleClick}
+                  className={`${
+                    stacks[0].id === "fd" && stacks[0].active ? "bg-red" : ""
+                  }`}
+                >
                   Front // Backend Development
                 </Button>
                 <Button type='select' id='ui' onClick={handleClick}>

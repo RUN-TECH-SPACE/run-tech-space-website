@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "../components/Footer";
 import Events from "../components/Home/Events";
+import Gallery from "../components/Home/Gallery";
 import Hero from "../components/Home/Hero";
 import Partners from "../components/Home/Partners";
 import Stacks from "../components/Home/Stacks";
@@ -25,6 +26,7 @@ function Home() {
         <Partners />
         <Stacks />
         <Events />
+        <Gallery />
       </main>
       <Footer />
     </>
