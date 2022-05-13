@@ -39,11 +39,11 @@ ol {
 }
 
 .heroLine {
-  background-image: url(../public/images/hero-line.svg);
+  background-image: url(/images/hero-line.svg);
 }
 
 .joinUsImage {
-  background-image: url(../public/images/join-us.png);
+  background-image: url(/images/join-us.png);
 }
 
 .swiper {
