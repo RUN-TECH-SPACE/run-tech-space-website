@@ -6,9 +6,11 @@ import Link from "next/link";
 import Head from "next/head";
 import { base } from "../../util";
 import { useRouter } from "next/router";
+import StackSelect from "../../components/StackSelect";
 
 function JoinUs() {
   const [loading, setLoading] = useState(false);
+  const [selectedStack, setSelectedStack] = useState([]);
   const [stacks, setStacks] = useState([
     {
       id: "fd",
@@ -37,28 +39,34 @@ function JoinUs() {
   } = useForm();
 
   const onSubmit = (data) => {
+    const payload = {
+      ...data,
+      stack: selectedStack,
+    };
+
+    console.log(payload);
     setLoading(true);
 
-    base("Registration").create(
-      [
-        {
-          fields: data,
-        },
-      ],
-      function (err, records) {
-        if (err) {
-          console.error(err);
-          // setToast("error");
-          return;
-        }
-        // records.forEach(function (record) {
-        //   reset();
-        // });
-        // setToast("success");
-        router.push("/join_us/success");
-        setLoading(false);
-      }
-    );
+    // base("Registration").create(
+    //   [
+    //     {
+    //       fields: data,
+    //     },
+    //   ],
+    //   function (err, records) {
+    //     if (err) {
+    //       console.error(err);
+    //       // setToast("error");
+    //       return;
+    //     }
+    //     // records.forEach(function (record) {
+    //     //   reset();
+    //     // });
+    //     // setToast("success");
+    //     router.push("/join_us/success");
+    //     setLoading(false);
+    //   }
+    // );
   };
 
   const handleClick = (e) => {
@@ -69,14 +77,7 @@ function JoinUs() {
 
     console.log(option);
 
-    // setStacks((prevState) => (
-    //   [
-    //   ...stacks,
-    //   {
-    //     id: e.target.id,
-    //     active: !stacks.find((stack) => stack.id === e.target.id).active,
-    //   },
-    // ]);
+    setStacks([...stacks, option]);
   };
 
   return (
@@ -142,7 +143,7 @@ function JoinUs() {
             <div>
               <p>Select stack(s) - Maximum of two stacks</p>
 
-              <div className='mt-2 flex flex-col justify-between gap-3 md:flex-row'>
+              <div className='mt-2 hidden flex-col justify-between gap-3 md:flex md:flex-row'>
                 <Button
                   type='select'
                   id='fd'
@@ -161,18 +162,13 @@ function JoinUs() {
                 </Button>
               </div>
 
-              <label htmlFor='stacks'>
-                <input type='checkbox' name='' id='' />
-                Front // Backend Development
-              </label>
-              <label htmlFor='stacks'>
-                <input type='checkbox' name='' id='' />
-                UI & UX Design
-              </label>
-              <label htmlFor='stacks'>
-                <input type='checkbox' name='' id='' />
-                Al & Data Science
-              </label>
+              <div className='md:hidden'>
+                <StackSelect
+                  register={register("stack")}
+                  selectedStack={selectedStack}
+                  setSelectedStack={setSelectedStack}
+                />
+              </div>
             </div>
 
             <Input
@@ -181,10 +177,13 @@ function JoinUs() {
               register={register("motivation", { required: true })}
             />
 
-            <Button type='submit' className='w-full'>
+            <Button
+              type='submit'
+              className='flex w-full items-center justify-center'
+            >
               {loading && (
                 <svg
-                  className='-ml-1 mr-3 h-5 w-5 animate-spin text-white'
+                  className='mr-3 inline h-5 w-5 animate-spin text-white'
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
                   viewBox='0 0 24 24'

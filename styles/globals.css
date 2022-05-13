@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Aktiv";
-  src: url("../public/AktivGroteskCorp-Regular.ttf");
+  src: url(/AktivGroteskCorp-Regular.ttf);
 }
 
 html {
