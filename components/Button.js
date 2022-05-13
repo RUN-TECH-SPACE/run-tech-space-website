@@ -14,12 +14,11 @@ function Button({ type, children, className, href, ...props }) {
       )}
 
       {type === "secondary" && (
-        <button
-          type='button'
-          className={`btn btn-secondary ${className ? className : ""}`}
-        >
-          {children}
-        </button>
+        <Link href={href}>
+          <a className={`btn btn-secondary ${className ? className : ""}`}>
+            {children}
+          </a>
+        </Link>
       )}
 
       {type === "select" && (

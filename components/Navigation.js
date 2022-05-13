@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Button from "./Button";
-import CustomLink from "./CustomLink";
 
 function Navigation() {
   const router = useRouter();
@@ -44,13 +43,14 @@ function Navigation() {
               </a>
             </Link>
           </li>
-          <li>Donate</li>
+          <li className='font-medium'>Donate</li>
         </ul>
 
         <div className='flex items-center space-x-4'>
           <Button
             type='secondary'
             className='hidden items-center gap-2 md:inline-flex'
+            href='https://chat.whatsapp.com/EnEuaN5k28O9NG4jwSTD7m'
           >
             <img src='/images/whatsapp.svg' alt='whatsapp' />
             Join us on WhatsApp
@@ -86,18 +86,33 @@ function Navigation() {
         <ul className='flex flex-col space-y-8 p-5'>
           <li>
             <Link href='/#stacks'>
-              <a>Stacks</a>
+              <a
+                className={`${
+                  router.pathname == "/#stacks" ? "text-[#1253A6]" : ""
+                } font-medium`}
+              >
+                Stacks
+              </a>
             </Link>
           </li>
           <li>
-            {/* <CustomLink to='/about'>About</CustomLink> */}
             <Link href='/about'>
-              <a>About</a>
+              <a
+                className={`${
+                  router.pathname == "/about" ? "text-[#1253A6]" : ""
+                } font-medium`}
+              >
+                About
+              </a>
             </Link>
           </li>
-          <li>Donate</li>
+          <li className='font-medium'>Donate</li>
           <li>
-            <Button type='secondary' className='inline-flex items-center gap-2'>
+            <Button
+              type='secondary'
+              className='inline-flex items-center gap-2'
+              href='https://chat.whatsapp.com/EnEuaN5k28O9NG4jwSTD7m'
+            >
               <img src='/images/whatsapp.svg' alt='whatsapp' />
               Join us on WhatsApp
             </Button>
