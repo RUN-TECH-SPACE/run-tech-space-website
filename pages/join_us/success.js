@@ -34,7 +34,8 @@ function success() {
 
           <Button
             type='secondary'
-            className='mx-auto flex items-center justify-center gap-2'
+            href='https://chat.whatsapp.com/EnEuaN5k28O9NG4jwSTD7m'
+            className='mx-auto flex max-w-fit items-center justify-center gap-2'
           >
             <img src='/images/whatsapp.svg' alt='whatsapp' />
             Join us on WhatsApp
