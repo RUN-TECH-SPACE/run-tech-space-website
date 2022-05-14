@@ -5,12 +5,12 @@ function Hero() {
     <header className='container grid gap-3 py-20 md:grid-cols-2'>
       <div className='order-2 space-y-3 self-center md:order-1'>
         <h2 className='heading2 text-left'>What really is RUN Tech Space?</h2>
-        <p className='text-lg md:text-xl'>
+        <p className=' md:text-xl'>
           Run Tech Space, a short form for Redeemer’s University Technology
           Space, is a creative environment for students to learn, brainstorm and
           innovate solutions to societal challenges.
         </p>
-        <p className='text-lg md:text-xl'>
+        <p className=' md:text-xl'>
           The purpose of RUN tech space is to provide a community where students
           are given the opportunity to learn, and gain real life experience in
           the technology world, also giving them the opportunity to meet and

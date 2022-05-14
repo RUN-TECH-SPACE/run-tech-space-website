@@ -7,7 +7,7 @@ function JoinUs() {
       <h2 className='heading2 max-w-lg text-left text-white'>
         Are you ready to become a tech bro / tech sis?
       </h2>
-      <p className='max-w-lg text-lg text-[#8A8A8A] md:text-xl'>
+      <p className='max-w-lg  text-[#8A8A8A] md:text-xl'>
         As you'll have gathered, we're open and ready to have you join our
         community today
       </p>

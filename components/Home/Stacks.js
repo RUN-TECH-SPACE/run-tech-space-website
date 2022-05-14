@@ -8,18 +8,21 @@ function Stacks() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
       btn: "Join Frontend Development",
       image: "/images/fd.png",
+      href: "/#",
     },
     {
       title: "UI & UX Design",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
       btn: "Join UI & UX Design",
       image: "/images/ui-ux.png",
+      href: "/stack/ui_ux",
     },
     {
       title: "Artificial Intelligence & Data Science",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
       btn: "Join AI & Data Science",
       image: "/images/ai.png",
+      href: "/#",
     },
   ];
   return (
@@ -41,7 +44,13 @@ function Stacks() {
               </h3>
               <p className='font-normal md:text-lg'>{item.text}</p>
 
-              <Button className='mt-5 text-sm md:text-base'>{item.btn}</Button>
+              <Button
+                type='link'
+                href={item.href}
+                className='mt-5 text-sm md:text-base'
+              >
+                {item.btn}
+              </Button>
             </div>
           </div>
         ))}
