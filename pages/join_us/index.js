@@ -24,19 +24,7 @@ function JoinUs() {
   } = useForm();
 
   const onSubmit = (data) => {
-    const stack = [
-      stackFd && {
-        name: "Frontend Development",
-      },
-      stackUi && {
-        name: "UI & UX Design",
-      },
-      stackAi
-        ? {
-            name: "Al & Data Science",
-          }
-        : "",
-    ];
+
 
     const payload = {
       ...data,

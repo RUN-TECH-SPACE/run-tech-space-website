@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Controller } from "swiper";
+import {base} from "../../util"
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,13 +15,28 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 function Gallery() {
   const [thumbsSwiperMobile, setThumbsSwiperMobile] = useState(null);
   const [thumbsSwiperDesktop, setThumbsSwiperDesktop] = useState(null);
-  const [gallery, setGaller] = useState([
+  const [gallery, setGallery] = useState([
     "https://swiperjs.com/demos/images/nature-1.jpg",
     "https://swiperjs.com/demos/images/nature-2.jpg",
     "https://swiperjs.com/demos/images/nature-3.jpg",
     "https://swiperjs.com/demos/images/nature-4.jpg",
     "https://swiperjs.com/demos/images/nature-5.jpg",
   ]);
+
+  useEffect(() => {
+    base('gallery').select({
+      view: "Grid view"
+  }).eachPage(function page(records) {
+    console.log(records, "records")
+    records[0].fields.Attachments.forEach((item => {
+      setGallery([...gallery, item?.url])}))
+  
+  }, function done(err) {
+      if (err) { console.error(err); return; }
+  });
+  }, [])
+
+  useEffect(() => console.log(gallery), [gallery])
 
   return (
     <>
@@ -63,11 +79,11 @@ function Gallery() {
             modules={[FreeMode, Thumbs]}
             className='mySwiper'
           >
-            {gallery.map((image, index) => (
+            {/* {gallery.map((image, index) => (
               <SwiperSlide key={index}>
                 <img src={image} />
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
         </div>
 
@@ -90,11 +106,11 @@ function Gallery() {
             modules={[FreeMode, Navigation, Thumbs]}
             className='mySwiper2-desktop'
           >
-            {gallery.map((image, index) => (
+            {/* {gallery.map((image, index) => (
               <SwiperSlide key={index}>
                 <img src={image} />
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
 
           <Swiper
@@ -108,11 +124,11 @@ function Gallery() {
             modules={[FreeMode, Navigation, Thumbs]}
             className='mySwiper-desktop'
           >
-            {gallery.map((image, index) => (
+            {/* {gallery.map((image, index) => (
               <SwiperSlide key={index}>
                 <img src={image} />
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
         </div>
       </div>
