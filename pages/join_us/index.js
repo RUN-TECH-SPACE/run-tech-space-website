@@ -24,36 +24,41 @@ function JoinUs() {
   } = useForm();
 
   const onSubmit = (data) => {
+    const [fd, ui, ai] = selectedStack;
+    const [fd_d, ui_d, ai_id] = [stackFd, stackUi, stackAi];
 
+    // For the desktop stack selection
+    fd_d = fd_d ? "Frontend Development" : null;
+    ui_d = ui_d ? "UI & UX Design" : null;
+    ai_id = ai_id ? "Al & Data Science" : null;
+
+    // console.log(JSON.stringify([fd?.name, ui?.name, ai?.name]));
+    // console.log(fd_d, ui_d, ai_id);
 
     const payload = {
       ...data,
-      stack: selectedStack.length ? selectedStack : stack,
+      stack: selectedStack.length
+        ? JSON.stringify([fd?.name, ui?.name, ai?.name])
+        : JSON.stringify([fd_d, ui_d, ai_id]),
     };
 
-    console.log(payload);
     setLoading(true);
 
-    // base("Registration").create(
-    //   [
-    //     {
-    //       fields: data,
-    //     },
-    //   ],
-    //   function (err, records) {
-    //     if (err) {
-    //       console.error(err);
-    //       // setToast("error");
-    //       return;
-    //     }
-    //     // records.forEach(function (record) {
-    //     //   reset();
-    //     // });
-    //     // setToast("success");
-    //     router.push("/join_us/success");
-    //     setLoading(false);
-    //   }
-    // );
+    base("Registration").create(
+      [
+        {
+          fields: payload,
+        },
+      ],
+      function (err, records) {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        router.push("/join_us/success");
+        setLoading(false);
+      }
+    );
   };
 
   return (
@@ -63,16 +68,16 @@ function JoinUs() {
       </Head>
 
       <main className='grid min-h-screen grid-cols-12'>
-        <div className='col-span-12 bg-[#1253A6] bg-[url(../public/images/joinUsBg.png)] bg-cover bg-no-repeat p-12 md:col-span-4 md:block'>
+        <aside className='col-span-12 bg-[#1253A6] bg-[url(../public/images/joinUsBg.png)] bg-cover bg-no-repeat py-12 px-8 md:col-span-4  md:block md:px-12'>
           <Link href='/'>
             <a className='inline-flex items-center gap-3 text-white'>
               <img src='/images/arrow-left.svg' alt='' />
               Return to Homepage
             </a>
           </Link>
-        </div>
+        </aside>
 
-        <div className='col-span-12 p-12 md:col-span-8'>
+        <div className='col-span-12 p-8 md:col-span-8 md:p-12'>
           <h2 className='heading2 text-left'>Join us</h2>
           <p className='mt-2 text-base md:text-xl'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac
@@ -81,44 +86,82 @@ function JoinUs() {
 
           <form onSubmit={handleSubmit(onSubmit)} className='mt-8 space-y-12'>
             <div className='flex flex-col gap-8 md:flex-row md:justify-between'>
-              <Input
-                label='First Name'
-                register={register("firstName", { required: true })}
-              />
-              <Input
-                label='Last Name'
-                register={register("lastName", { required: true })}
-              />
+              <div className='w-full'>
+                <Input
+                  label='First Name'
+                  register={register("firstName", { required: true })}
+                />
+                {errors.firstName && (
+                  <span className='mt-2 text-sm text-red-500'>
+                    First Name input not field
+                  </span>
+                )}
+              </div>
+
+              <div className='w-full'>
+                <Input
+                  label='Last Name'
+                  register={register("lastName", { required: true })}
+                />
+                {errors.lastName && (
+                  <span className='mt-2 text-sm text-red-500'>
+                    Last Name input not field
+                  </span>
+                )}
+              </div>
             </div>
 
-            <Input
-              label='Email'
-              register={register("email", {
-                required: true,
-                pattern: /^\S+@\S+$/i,
-              })}
-            />
-            {errors.email?.type === "pattern" && (
-              <span className='mt-2 text-sm text-red-500'>
-                Email format not correct
-              </span>
-            )}
+            <div>
+              <Input
+                label='Email'
+                register={register("email", {
+                  required: true,
+                  pattern: /^\S+@\S+$/i,
+                })}
+              />
+              {errors.email?.type === "required" && (
+                <span className='mt-2 text-sm text-red-500'>
+                  Email input not field
+                </span>
+              )}
+              {errors.email?.type === "pattern" && (
+                <span className='mt-2 text-sm text-red-500'>
+                  Email format not correct
+                </span>
+              )}
+            </div>
 
             <div className='flex flex-col gap-8 md:flex-row md:justify-between'>
-              <Input
-                label='Department'
-                register={register("department", { required: true })}
-              />
-              <Input
-                label='Level'
-                type='select'
-                register={register("level", { required: true })}
-              />
+              <div className='w-full'>
+                <Input
+                  label='Department'
+                  register={register("department", { required: true })}
+                />
+                {errors.department && (
+                  <span className='mt-2 text-sm text-red-500'>
+                    Department input not field
+                  </span>
+                )}
+              </div>
+
+              <div className='w-full'>
+                <Input
+                  label='Level'
+                  type='select'
+                  register={register("level", { required: true })}
+                />
+                {errors.level && (
+                  <span className='mt-2 text-sm text-red-500'>
+                    Level input not field
+                  </span>
+                )}
+              </div>
             </div>
 
             <div>
               <p>Select stack(s) - Maximum of two stacks</p>
 
+              {/* Desktop */}
               <div className='mt-2 hidden flex-col justify-between gap-3 md:flex md:flex-row'>
                 <Button
                   type='select'
@@ -158,6 +201,7 @@ function JoinUs() {
                 </Button>
               </div>
 
+              {/* Mobile */}
               <div className='md:hidden'>
                 <StackSelect
                   register={register("stack")}
@@ -170,7 +214,7 @@ function JoinUs() {
             <Input
               label='What is your motivation?'
               type='textarea'
-              register={register("motivation", { required: true })}
+              register={register("motivation")}
             />
 
             <Button

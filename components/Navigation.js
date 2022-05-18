@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
 
 function Navigation() {
@@ -10,6 +10,14 @@ function Navigation() {
   const handleClick = () => {
     setHamClicked(!hamClicked);
   };
+
+  useEffect(() => {
+    if (hamClicked) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [hamClicked]);
 
   return (
     <nav className='relative border-b-2 border-lightGrey py-3'>
@@ -79,7 +87,7 @@ function Navigation() {
       </div>
       {/* Navigation for Mobile */}
       <div
-        className={`absolute top-[86px] w-full bg-white transition md:hidden ${
+        className={`absolute top-[86px] h-[calc(100vh-86px)] w-full bg-white transition md:hidden ${
           hamClicked ? "block" : "hidden"
         }`}
       >

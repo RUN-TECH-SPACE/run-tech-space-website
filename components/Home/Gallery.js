@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Controller } from "swiper";
-import {base} from "../../util"
+import { base } from "../../util";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,33 +9,21 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs, Pagination } from "swiper";
+import SkeletonLoader from "../SkeletonLoader";
 
 function Gallery() {
   const [thumbsSwiperMobile, setThumbsSwiperMobile] = useState(null);
   const [thumbsSwiperDesktop, setThumbsSwiperDesktop] = useState(null);
-  const [gallery, setGallery] = useState([
-    "https://swiperjs.com/demos/images/nature-1.jpg",
-    "https://swiperjs.com/demos/images/nature-2.jpg",
-    "https://swiperjs.com/demos/images/nature-3.jpg",
-    "https://swiperjs.com/demos/images/nature-4.jpg",
-    "https://swiperjs.com/demos/images/nature-5.jpg",
-  ]);
+  const [gallery, setGallery] = useState([]);
 
   useEffect(() => {
-    base('gallery').select({
-      view: "Grid view"
-  }).eachPage(function page(records) {
-    console.log(records, "records")
-    records[0].fields.Attachments.forEach((item => {
-      setGallery([...gallery, item?.url])}))
-  
-  }, function done(err) {
-      if (err) { console.error(err); return; }
-  });
-  }, [])
-
-  useEffect(() => console.log(gallery), [gallery])
+    base("gallery")
+      .select({ view: "Grid view" })
+      .eachPage((records) => {
+        setGallery(records[0].fields.Attachments);
+      });
+  }, []);
 
   return (
     <>
@@ -50,6 +37,7 @@ function Gallery() {
               "--swiper-navigation-color": "#fff",
               "--swiper-pagination-color": "#fff",
             }}
+            centeredSlides={true}
             loop={true}
             spaceBetween={10}
             navigation={true}
@@ -59,31 +47,18 @@ function Gallery() {
                   ? thumbsSwiperMobile
                   : null,
             }}
-            modules={[FreeMode, Navigation, Thumbs]}
+            modules={[FreeMode, Navigation, Thumbs, Pagination]}
             className='mySwiper2'
           >
-            {gallery.map((image, index) => (
-              <SwiperSlide key={index}>
-                <img src={image} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          <Swiper
-            onSwiper={setThumbsSwiperMobile}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={2}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Thumbs]}
-            className='mySwiper'
-          >
-            {/* {gallery.map((image, index) => (
-              <SwiperSlide key={index}>
-                <img src={image} />
-              </SwiperSlide>
-            ))} */}
+            {gallery.length === 0 ? (
+              <SkeletonLoader gallery />
+            ) : (
+              gallery.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img src={image.url} className='object-cover' />
+                </SwiperSlide>
+              ))
+            )}
           </Swiper>
         </div>
 
@@ -106,11 +81,16 @@ function Gallery() {
             modules={[FreeMode, Navigation, Thumbs]}
             className='mySwiper2-desktop'
           >
-            {/* {gallery.map((image, index) => (
-              <SwiperSlide key={index}>
-                <img src={image} />
-              </SwiperSlide>
-            ))} */}
+            {gallery.length === 0 ? (
+              <SkeletonLoader gallery />
+            ) : (
+              gallery &&
+              gallery.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img src={image.url} className='object-cover' />
+                </SwiperSlide>
+              ))
+            )}
           </Swiper>
 
           <Swiper
@@ -121,14 +101,15 @@ function Gallery() {
             freeMode={true}
             navigation={true}
             watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
+            modules={[FreeMode, Thumbs]}
             className='mySwiper-desktop'
           >
-            {/* {gallery.map((image, index) => (
-              <SwiperSlide key={index}>
-                <img src={image} />
-              </SwiperSlide>
-            ))} */}
+            {gallery &&
+              gallery.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img src={image.url} className='object-cover' />
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>

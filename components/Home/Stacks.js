@@ -35,6 +35,7 @@ function Stacks() {
             <img
               src={item.image}
               alt=''
+              lazy='true'
               className='w-full self-end justify-self-end md:order-2'
             />
 
