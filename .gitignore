@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+./runtechspace-cms/node_modules
+/runtechspace-cms/node_modules
+
+
 # testing
 /coverage
 
