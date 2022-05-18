@@ -4,19 +4,19 @@ function Events() {
   const onGoingEvents = [
     {
       tag: "Every Wednesday",
-      title: "Reactathon",
+      title: "Tech Truths $ Bants",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque.",
     },
-    {
-      tag: "Every Wednesday",
-      title: "Reactathon",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque.",
-    },
-    {
-      tag: "Every Wednesday",
-      title: "Reactathon",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque.",
-    },
+    // {
+    //   tag: "Every Wednesday",
+    //   title: "Reactathon",
+    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque.",
+    // },
+    // {
+    //   tag: "Every Wednesday",
+    //   title: "Reactathon",
+    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque.",
+    // },
   ];
 
   return (
@@ -24,7 +24,7 @@ function Events() {
       <div className='container'>
         <h2 className='heading2'>Events</h2>
 
-        <div className='mt-12 gap-8 md:mt-20 md:flex md:justify-between'>
+        <div className='mt-12 gap-8 md:mt-20 md:flex md:justify-center md:text-center'>
           {onGoingEvents.map((item, index) => (
             <div key={index} className='space-y-2 even:my-10 md:even:my-0'>
               <p>
@@ -34,7 +34,7 @@ function Events() {
               <h3 className='text-xl font-semibold md:text-3xl'>
                 {item.title}
               </h3>
-              <p className=''>{item.desc}</p>
+              <p className='max-w-sm'>{item.desc}</p>
             </div>
           ))}
         </div>
@@ -53,7 +53,7 @@ function Events() {
             </p>
 
             <h3 className='text-xl font-semibold md:text-3xl'>
-              2022/23 Hackathon
+              TechFest 1.0: A Journey Into Tech
             </h3>
 
             <p className='md:text-lg'>
