@@ -5,7 +5,7 @@ function What() {
     <div className='space-y-20'>
       <section className='container'>
         <h2 className='heading2 mb-3 text-left'>What is UI & UX Design?</h2>
-        <p>
+        <p className='md:text-lg'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
           vulputate tincidunt ante lorem varius donec feugiat. Ut tellus sapien
           sit interdum eget augue congue nulla diam. Sed feugiat sit diam diam
@@ -23,7 +23,7 @@ function What() {
       </section>
       <section className='container'>
         <h2 className='heading2 mb-3 text-left'>Why UI & UX Design?</h2>
-        <p>
+        <p className='md:text-lg'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
           vulputate tincidunt ante lorem varius donec feugiat. Ut tellus sapien
           sit interdum eget augue congue nulla diam. Sed feugiat sit diam diam
@@ -34,7 +34,7 @@ function What() {
         <h2 className='heading2 mb-3 text-left'>
           What do UI & UX Designers do?
         </h2>
-        <p>
+        <p className='md:text-lg'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
           vulputate tincidunt ante lorem varius donec feugiat. Ut tellus sapien
           sit interdum eget augue congue nulla diam. Sed feugiat sit diam diam

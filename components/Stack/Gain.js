@@ -17,7 +17,9 @@ function Gain() {
               <h3 className='text-lg font-medium md:text-xl'>
                 Build your portfolio
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              <p className='md:text-lg'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+              </p>
             </div>
           </div>
           <div className='gap-4 text-center md:grid md:grid-cols-[40px_1fr] md:text-left'>
@@ -30,7 +32,9 @@ function Gain() {
               <h3 className='text-lg font-medium md:text-xl'>
                 Collaborate with other designers
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className='md:text-lg'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
           <div className='gap-4 text-center md:grid md:grid-cols-[40px_1fr] md:text-left'>
@@ -43,7 +47,9 @@ function Gain() {
               <h3 className='text-lg font-medium md:text-xl'>
                 Access to premium content
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className='md:text-lg'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
           <div className='gap-4 text-center md:grid md:grid-cols-[40px_1fr] md:text-left'>
@@ -56,7 +62,9 @@ function Gain() {
               <h3 className='text-lg font-medium md:text-xl'>
                 Hands-on-learning
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className='md:text-lg'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
         </div>
