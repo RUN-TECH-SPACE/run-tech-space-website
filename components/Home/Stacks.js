@@ -12,7 +12,7 @@ function Stacks() {
     },
     {
       title: "UI & UX Design",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
+      text: "So you want to build a career in user interface design (UI), but there's only one problem: you have no idea where to begin, or you have very good research skills to help users navigate around an interface without difficulty, leading you to a user experience (UX) career. No worries, this is the place for you. The UI/UX stack is available at Run Tech Space community to help you get started in your career.",
       btn: "Join UI & UX Design",
       image: "/images/ui-ux.png",
       href: "/stack/ui_ux",
