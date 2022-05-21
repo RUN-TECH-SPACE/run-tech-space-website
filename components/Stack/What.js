@@ -1,21 +1,18 @@
 import React from "react";
 
-function What({what}) {
-  console.log(what)
+function What({ what }) {
+  // console.log(what)
   return (
     <div className='space-y-20'>
       <section className='container'>
         <h2 className='heading2 mb-3 text-left'>What is UI & UX Design?</h2>
 
-        <div className="space-y-3">
-
-        {
-          what.map((item, id) => (
+        <div className='space-y-3'>
+          {what?.map((item, id) => (
             <p key={id} className='md:text-lg'>
               {item.text}
             </p>
-          ))
-        }
+          ))}
         </div>
       </section>
       {/* <section className='container'>
