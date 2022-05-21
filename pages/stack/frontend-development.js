@@ -14,7 +14,7 @@ function Frontend() {
         <title>Frontend - RUN Tech Space</title>
       </Head>
       <Navigation />
-      <Hero link='/join_us' />
+      <Hero heading="Frontend Development" link='/join_us' />
       <main className='space-y-20'>
         {/* <Instructors /> */}
         <What />

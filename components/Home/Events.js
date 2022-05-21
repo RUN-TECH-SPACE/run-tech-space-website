@@ -20,7 +20,7 @@ function Events() {
   ];
 
   return (
-    <section className='bg-lightGrey py-20'>
+    <section className='bg-lightGrey py-20' id='events'>
       <div className='container'>
         <h2 className='heading2'>Events</h2>
 

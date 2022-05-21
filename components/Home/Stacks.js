@@ -8,21 +8,21 @@ function Stacks() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
       btn: "Join Frontend Development",
       image: "/images/fd.png",
-      href: "/#",
+      href: "/stack/frontend-development",
     },
     {
       title: "UI & UX Design",
       text: "So you want to build a career in user interface design (UI), but there's only one problem: you have no idea where to begin, or you have very good research skills to help users navigate around an interface without difficulty, leading you to a user experience (UX) career. No worries, this is the place for you. The UI/UX stack is available at Run Tech Space community to help you get started in your career.",
       btn: "Join UI & UX Design",
       image: "/images/ui-ux.png",
-      href: "/stack/ui_ux",
+      href: "/stack/ui-ux-design",
     },
     {
       title: "Artificial Intelligence & Data Science",
       text: "Every day, businesses utilize data and analytics to improve efficiencies, gain deeper operational insights, and ultimately earn more money. However, data science's significance extends far beyond the commercial world and is assisting in the resolution of some of humanity's most serious problems. Data science is being used for the better welfare of society, from helping health practitioners address problems more intelligently to fighting poverty, mitigating climate change, solving transportation issues, and lots more.  Artificial Intelligence impacts our lives and the world around us.",
       btn: "Join AI & Data Science",
       image: "/images/ai.png",
-      href: "/#",
+      href: "/stack/artificial-intelligence-&-data-science",
     },
   ];
   return (

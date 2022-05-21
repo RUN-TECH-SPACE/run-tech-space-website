@@ -6,18 +6,25 @@ function Footer() {
     <footer className='my-12 pt-20'>
       <div className='container'>
         <div className='mb-16 grid grid-cols-12 md:gap-5'>
-          <img
-            src='/images/logo.svg'
-            alt='RUN Tech Space'
-            className='col-span-12 mx-auto md:col-span-3 md:ml-0'
-          />
+          <Link href='/'>
+            <a className='col-span-12 mx-auto md:col-span-3 md:ml-0'>
+              <img src='/images/logo.svg' alt='RUN Tech Space' />
+            </a>
+          </Link>
 
           <div className='col-span-6 mt-10 md:col-span-3  md:mt-0'>
             <h4 className='mb-3 font-medium'>Home</h4>
             <ul className='space-y-3'>
-              {["Partners", "About", "Events", "Gallery"].map((item, index) => (
+              {[
+                { text: "Partners", link: "/#partners" },
+                { text: "About", link: "/about" },
+                { text: "Events", link: "/#events" },
+                { text: "Gallery", link: "/#gallery" },
+              ].map((item, index) => (
                 <li key={index} className='text-grey'>
-                  {item}
+                  <Link href={item.link}>
+                    <a>{item.text}</a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -27,12 +34,20 @@ function Footer() {
             <h4 className='mb-3 font-medium'>Stacks</h4>
             <ul className=' space-y-3'>
               {[
-                "Frontend development",
-                "UI & UX design",
-                "AI & Data Science",
+                {
+                  text: "Frontend development",
+                  link: "/stack/frontend-development",
+                },
+                { text: "UI & UX design", link: "/stack/ui-ux-design" },
+                {
+                  text: "AI & Data Science",
+                  link: "/stack/artificial-intelligence-&-data-science",
+                },
               ].map((item, index) => (
                 <li key={index} className='text-grey'>
-                  {item}
+                  <Link href={item.link}>
+                    <a>{item.text}</a>
+                  </Link>
                 </li>
               ))}
             </ul>

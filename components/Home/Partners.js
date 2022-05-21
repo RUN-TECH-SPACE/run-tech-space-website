@@ -2,7 +2,7 @@ import React from "react";
 
 function Partners() {
   return (
-    <section className='bg-lightGrey py-20'>
+    <section className='bg-lightGrey py-20' id='partners'>
       <div className='container'>
         <h2 className='heading2'>Ours Partners</h2>
 

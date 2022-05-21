@@ -27,7 +27,7 @@ function Gallery() {
 
   return (
     <>
-      <div className='container my-20'>
+      <div className='container my-20' id='gallery'>
         <h2 className='heading2 mb-12'>Gallery</h2>
 
         {/* Mobile */}
@@ -95,11 +95,15 @@ function Gallery() {
 
           <Swiper
             onSwiper={setThumbsSwiperDesktop}
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
             loop={true}
             spaceBetween={10}
             slidesPerView={4}
             freeMode={true}
-            navigation={true}
+            // navigation={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Thumbs]}
             className='mySwiper-desktop'

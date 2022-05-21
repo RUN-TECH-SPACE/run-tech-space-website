@@ -16,33 +16,34 @@ function UIUX() {
       },
       {
         text: "UI design is the process of creating the look and feel of an application(web or mobile) it focuses on the appearance of the application to the user's eye. The UI design field involves planning, creating, and improving the user interaction with the layout of an application or website. As a designer, your job is to plan, design, and create user interface elements.",
-      }, {
-        text: "UX design brings to summary the complete user experience while using the provided interface of the application and concludes on how well the user is able to navigate and interact with the website layout without difficulty." 
-      }
-    ]
-  ]
+      },
+      {
+        text: "UX design brings to summary the complete user experience while using the provided interface of the application and concludes on how well the user is able to navigate and interact with the website layout without difficulty.",
+      },
+    ],
+  ];
   const gain = [
     {
       img: "/images/uiux/gain1.svg",
       hd: "Build your portfolio",
-      text: "By the end of the course you'll have an online portfolio to show an intending client, which could stand as a resume."
+      text: "By the end of the course you'll have an online portfolio to show an intending client, which could stand as a resume.",
     },
     {
       img: "/images/uiux/gain2.svg",
       hd: " Collaborate with other designers",
-      text: "RUN Tech Space gives you an oppurtunity to work with other designers on various projects."
+      text: "RUN Tech Space gives you an oppurtunity to work with other designers on various projects.",
     },
     {
-      img:"/images/uiux/gain3.svg",
+      img: "/images/uiux/gain3.svg",
       hd: "   Access to premium content",
-      text: ""
+      text: "",
     },
     {
       img: "/images/uiux/gain4.svg",
       hd: "Hands-on-learning",
-      text: "During the duration of the course you as a designer would work on projects, you won't feel felt out."
-    }
-  ]
+      text: "During the duration of the course you as a designer would work on projects, you won't feel felt out.",
+    },
+  ];
   return (
     <>
       <Head>
@@ -50,7 +51,7 @@ function UIUX() {
       </Head>
 
       <Navigation />
-      <Hero link="/join_us" />
+      <Hero heading='UI & UX Design' link='/join_us' />
       <main className='space-y-20'>
         {/* <Instructors /> */}
         <What what={what[0]} />
