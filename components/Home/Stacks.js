@@ -4,8 +4,8 @@ import Button from "../Button";
 function Stacks() {
   const data = [
     {
-      title: "Frontend development",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque. Etiam quam volutpat, nisl quam massa consequat at facilisi. Nisi cursus pharetra integer eu. Commodo turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat velit, faucibus ut pretium est. Sagittis, consequat, congue est libero. Dictum eu amet amet proin odio.",
+      title: "Front End development",
+      text: "As of today, one of the most demanding skill to learn is Front End Development. With the rate of the web growing, with just the skill of Front End Development fullstack application could be built, just like Twitter and Facebook. So if you're just getting stated with the Front End Development or you're completely new, welcome to the stack, were we'll cover the basics of the Front End Development to make you a Front End Developer.",
       btn: "Join Frontend Development",
       image: "/images/fd.png",
       href: "/stack/frontend-development",

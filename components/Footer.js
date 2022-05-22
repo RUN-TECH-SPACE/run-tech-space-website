@@ -55,15 +55,21 @@ function Footer() {
 
           <div className='col-span-12 mt-10 space-y-3 text-center md:col-span-3 md:mt-0 md:text-left'>
             <div className='flex justify-center gap-4 md:justify-start'>
+              {/* "/images/facebook.svg", */}
+              {/* "/images/linkedin.svg", */}
               {[
-                "/images/facebook.svg",
-                "/images/instagram.svg",
-                "/images/linkedin.svg",
-                "/images/twitter.svg",
-              ].map((img, ind) => (
-                <Link key={ind} href='/#'>
+                {
+                  image: "/images/instagram.svg",
+                  link: "https://www.instagram.com/runtechspace?igshid=YmMyMTA2M2Y=",
+                },
+                {
+                  image: "/images/twitter.svg",
+                  link: "https://twitter.com/RunTechSpace_",
+                },
+              ].map((item, ind) => (
+                <Link key={ind} href={item.link}>
                   <a>
-                    <img src={img} alt='icon' />
+                    <img src={item.image} alt='icon' />
                   </a>
                 </Link>
               ))}
