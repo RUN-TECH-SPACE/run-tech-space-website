@@ -6,15 +6,9 @@ function Partners() {
       <div className='container'>
         <h2 className='heading2'>Ours Partners</h2>
 
-        <div className='mt-12 flex justify-between gap-5'>
-          {Array(4)
-            .fill()
-            .map((item, index) => (
-              <div
-                key={index}
-                className='h-[100px] w-[80%] rounded-md bg-[#EBEBEB]'
-              ></div>
-            ))}
+        <div className='mx-auto mt-12 flex max-w-md justify-around gap-5'>
+          <img src='/images/runsa.png' alt='runsa' />
+          <img src='/images/hoshistech.png' alt='hoshistech' />
         </div>
       </div>
     </section>
