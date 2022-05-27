@@ -44,6 +44,18 @@ function UIUX() {
       text: "During the duration of the course you as a designer would work on projects, you won't feel felt out.",
     },
   ];
+
+  const outline = [
+    "Introduction to UI/UX",
+    "Refactoring UI brush up",
+    "Introduction to Figma",
+    "Advanced Figma: Learning component, auto layout and variants.",
+    "Google UX Course: Foundation of User Experience (UX) Design Review.",
+    "Google UX Course: Empathize, Deﬁne and Ideate Review",
+    "Google UX Course: Build Wireframes and Low-Fidelity Prototypes Review",
+    "Google UX Course: Conduct UX Research and Test Early Concept Review",
+    "Google UX Course: Create High-FIdelity Designs and Prototypes in Figma Review",
+  ];
   return (
     <>
       <Head>
@@ -53,10 +65,10 @@ function UIUX() {
       <Navigation />
       <Hero heading='UI & UX Design' link='/join_us' />
       <main className='space-y-20'>
-        {/* <Instructors /> */}
-        <What what={what[0]} />
+        <Instructors uiux />
+        <What heading='UI & UX Design' what={what[0]} />
         <Gain gain={gain} />
-        <CourseOutline />
+        <CourseOutline outline={outline} />
       </main>
       <Footer />
     </>

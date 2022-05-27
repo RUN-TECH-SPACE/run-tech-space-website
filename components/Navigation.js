@@ -92,7 +92,7 @@ function Navigation() {
         }`}
       >
         <ul className='flex flex-col space-y-8 p-5'>
-          <li>
+          <li onClick={handleClick}>
             <Link href='/#stacks'>
               <a
                 className={`${
@@ -103,7 +103,7 @@ function Navigation() {
               </a>
             </Link>
           </li>
-          <li>
+          <li onClick={handleClick}>
             <Link href='/about'>
               <a
                 className={`${
@@ -114,8 +114,8 @@ function Navigation() {
               </a>
             </Link>
           </li>
-          <li className='font-medium'>Donate</li>
-          <li>
+          <li className='font-medium' onClick={handleClick}>Donate</li>
+          <li onClick={handleClick}>
             <Button
               type='secondary'
               className='inline-flex items-center gap-2'
