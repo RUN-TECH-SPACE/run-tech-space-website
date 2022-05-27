@@ -18,7 +18,6 @@ function Home() {
           content='Providing students the ability to think creatively and build
             innovative solutions to global problems'
         />
-        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navigation />
       <Hero />
