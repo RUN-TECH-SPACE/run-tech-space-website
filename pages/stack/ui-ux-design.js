@@ -63,7 +63,11 @@ function UIUX() {
       </Head>
 
       <Navigation />
-      <Hero heading='UI & UX Design' link='/join_us' />
+      <Hero
+        heading='UI & UX Design'
+        link='/join_us'
+        img='/images/uiux/ui-hero.png'
+      />
       <main className='space-y-20'>
         <Instructors uiux />
         <What heading='UI & UX Design' what={what[0]} />

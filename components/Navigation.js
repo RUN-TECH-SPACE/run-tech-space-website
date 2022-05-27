@@ -114,7 +114,9 @@ function Navigation() {
               </a>
             </Link>
           </li>
-          <li className='font-medium' onClick={handleClick}>Donate</li>
+          <li className='font-medium' onClick={handleClick}>
+            Donate
+          </li>
           <li onClick={handleClick}>
             <Button
               type='secondary'

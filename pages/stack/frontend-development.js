@@ -19,7 +19,7 @@ function Frontend() {
       },
     ],
   ];
-   const gain = [
+  const gain = [
     {
       img: "/images/uiux/gain1.svg",
       hd: "Build your portfolio",
@@ -43,7 +43,7 @@ function Frontend() {
   ];
 
   // const outline = [
-  //   "How the internet works", 
+  //   "How the internet works",
   //   ""
   // ]
   return (
@@ -52,7 +52,12 @@ function Frontend() {
         <title>Frontend - RUN Tech Space</title>
       </Head>
       <Navigation />
-      <Hero heading="Frontend Development" description="If you're curious to know how the internet works along with how websites are made, then this stack got your back. You'll learn the fundamentals that'll help you in the long run as you pursuit this skill to become a Frontend Developer." link='/join_us' />
+      <Hero
+        heading='Frontend Development'
+        description="If you're curious to know how the internet works along with how websites are made, then this stack got your back. You'll learn the fundamentals that'll help you in the long run as you pursuit this skill to become a Frontend Developer."
+        link='/join_us'
+        img='/images/frontend-stack.png'
+      />
       <main className='space-y-20'>
         <Instructors frontend />
         <What heading='Frontend Development' what={what[0]} />

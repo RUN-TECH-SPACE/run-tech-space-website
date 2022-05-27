@@ -15,7 +15,11 @@ function ArtificialIntelligence() {
       </Head>
 
       <Navigation />
-      <Hero heading='Artificial Intelligence & Data Science' link='/join_us' />
+      <Hero
+        heading='Artificial Intelligence & Data Science'
+        link='/join_us'
+        img='/images/frontend-stack.png'
+      />
       <main className='space-y-20'>
         {/* <Instructors /> */}
         {/* <What what={what[0]} />

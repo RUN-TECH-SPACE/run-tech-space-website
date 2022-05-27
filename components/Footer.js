@@ -74,7 +74,7 @@ function Footer() {
                 </Link>
               ))}
             </div>
-            <p>support@runtechspace.com</p>
+            <p>runtechspace@gmail.com</p>
             <p>+234-XXXX-XXXX</p>
           </div>
         </div>
