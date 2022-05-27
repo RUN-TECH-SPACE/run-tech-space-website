@@ -79,10 +79,10 @@ function JoinUs() {
 
         <div className='col-span-12 p-8 md:col-span-8 md:p-12'>
           <h2 className='heading2 text-left'>Join us</h2>
-          <p className='mt-2 text-base md:text-xl'>
+          {/* <p className='mt-2 text-base md:text-xl'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac
             nec pellentesque.
-          </p>
+          </p> */}
 
           <form onSubmit={handleSubmit(onSubmit)} className='mt-8 space-y-12'>
             <div className='flex flex-col gap-8 md:flex-row md:justify-between'>
