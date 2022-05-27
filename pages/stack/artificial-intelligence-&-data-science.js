@@ -20,7 +20,7 @@ function ArtificialIntelligence() {
         {/* <Instructors /> */}
         {/* <What what={what[0]} />
         <Gain gain={gain} /> */}
-        <CourseOutline />
+        {/* <CourseOutline /> */}
       </main>
       <Footer />
     </>
