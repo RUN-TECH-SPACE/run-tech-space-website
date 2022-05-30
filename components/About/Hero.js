@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import  AboutImage  from "../../public/images/about-image.png"
 
 function Hero() {
   return (
@@ -6,7 +8,7 @@ function Hero() {
       <div className='order-2 space-y-3 self-center md:order-1'>
         <h2 className='heading2 text-left'>What really is RUN Tech Space?</h2>
         <p className=' md:text-xl'>
-          Run Tech Space, a short form for Redeemer’s University Technology
+          Run Tech Space, a short form for Redeemer's University Technology
           Space, is a creative environment for students to learn, brainstorm and
           innovate solutions to societal challenges.
         </p>
@@ -18,11 +20,15 @@ function Hero() {
         </p>
       </div>
 
-      <img
+      {/* <AboutImage /> */}
+
+      <Image src={AboutImage} objectFit className="order-1 justify-self-center md:order-2 md:justify-self-end" prioritys />
+
+      {/* <img
         src='/images/heroBg.png'
         alt='banner'
         className='order-1 justify-self-center md:order-2 md:justify-self-end'
-      />
+      /> */}
     </header>
   );
 }
