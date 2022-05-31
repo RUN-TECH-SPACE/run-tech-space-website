@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import  AboutImage  from "../../public/images/about-image.png"
+import AboutImage from "../../public/images/about-image.png";
 
 function Hero() {
   return (
-    <header className='container grid gap-3 py-20 md:grid-cols-2'>
+    <header className='container grid gap-3 py-10 md:grid-cols-2   md:py-20'>
       <div className='order-2 space-y-3 self-center md:order-1'>
         <h2 className='heading2 text-left'>What really is RUN Tech Space?</h2>
         <p className=' md:text-xl'>
@@ -22,7 +22,14 @@ function Hero() {
 
       {/* <AboutImage /> */}
 
-      <Image src={AboutImage} objectFit className="order-1 justify-self-center md:order-2 md:justify-self-end" prioritys />
+      <div className='order-1 md:order-2'>
+        <Image
+          src={AboutImage}
+          objectFit
+          className=' justify-self-center  md:justify-self-end'
+          priority
+        />
+      </div>
 
       {/* <img
         src='/images/heroBg.png'

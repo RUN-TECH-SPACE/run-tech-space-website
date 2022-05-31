@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button";
 
-function Hero({ link, heading, description, img }) {
+function Hero({ link, heading, description, img, ai }) {
   return (
     <header className='container grid gap-3 py-10 pb-20 md:grid-cols-2 md:py-20'>
       <div className='order-2 space-y-3 self-center md:order-1'>
@@ -24,7 +24,7 @@ function Hero({ link, heading, description, img }) {
           )}
         </p>
         <Button type='link' href={link}>
-          Join {heading} Stack
+          Join {ai ? "AI and Date Science" : heading} Stack
         </Button>
       </div>
 

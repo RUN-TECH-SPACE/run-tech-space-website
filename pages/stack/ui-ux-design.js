@@ -56,6 +56,7 @@ function UIUX() {
     "Google UX Course: Conduct UX Research and Test Early Concept Review",
     "Google UX Course: Create High-FIdelity Designs and Prototypes in Figma Review",
   ];
+
   return (
     <>
       <Head>
@@ -66,6 +67,14 @@ function UIUX() {
       <Hero
         heading='UI & UX Design'
         link='/join_us'
+        description={[
+          "Design isn't just about the aesthetics. It is the art of making things usable, whether they are apps, gadgets, or simple everyday objects like chairs. This is why user research and user interface, usability testing are so important, and as a UI and UX designer, you must be prepared to iterate and repeat your designs multiple times.",
+          <br key='1' />,
+          <span className='mt-3 inline-block italic' key='2'>
+            "Design isn't finished until somebody is using it" - Brenda Laurel,
+            Phd, Independent Scholar
+          </span>,
+        ]}
         img='/images/uiux/ui-hero.png'
       />
       <main className='space-y-20'>

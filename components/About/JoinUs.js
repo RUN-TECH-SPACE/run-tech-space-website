@@ -3,7 +3,7 @@ import Button from "../Button";
 
 function JoinUs() {
   return (
-    <section className='joinUsImage container mt-28 space-y-4 rounded-[50px]  px-10 py-20 pt-40'>
+    <section className='joinUsImage container mt-28 space-y-4 rounded-[50px]  bg-black px-10 py-20 pt-40'>
       <h2 className='heading2 max-w-lg text-left text-white'>
         Are you ready to become a tech bro / tech sis?
       </h2>

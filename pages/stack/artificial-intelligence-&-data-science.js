@@ -19,6 +19,7 @@ function ArtificialIntelligence() {
         heading='Artificial Intelligence & Data Science'
         link='/join_us'
         img='/images/frontend-stack.png'
+        ai
       />
       <main className='space-y-20'>
         {/* <Instructors /> */}
