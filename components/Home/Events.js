@@ -5,7 +5,7 @@ function Events() {
     {
       tag: "Every Wednesday",
       title: "Tech Truths $ Bants",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed ac nec pellentesque.",
+      desc: "Come listen to several speakers on different topics, ranging from tech related topics to our daily routine gists.",
     },
     // {
     //   tag: "Every Wednesday",
@@ -49,7 +49,7 @@ function Events() {
           <div className='order-1 col-span-2 space-y-2'>
             <p>
               <span className='my-auto mr-2 inline-block h-2 w-2 rounded-full bg-[#D73B3B]'></span>
-              July 23, 2022
+              June 3rd, 2022
             </p>
 
             <h3 className='text-xl font-semibold md:text-3xl'>
@@ -57,17 +57,14 @@ function Events() {
             </h3>
 
             <p className='md:text-lg'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat sed
-              ac nec pellentesque. Etiam quam volutpat, nisl quam massa
-              consequat at facilisi. Nisi cursus pharetra integer eu. Commodo
-              turpis a, luctus rutrum ut erat elit. Amet neque ut tortor erat
-              velit, faucibus ut pretium est. Sagittis, consequat, congue est
-              libero. Dictum eu amet amet proin odio.
+              A festival of sessions, pitch decks, showcases, networking and
+              much more. With several universities, tech communities, speakers
+              from across Nigeria.
             </p>
 
-            <button className='font-semibold text-[#1253A6]'>
+            {/* <button className='font-semibold text-[#1253A6]'>
               Read More &gt;&gt;
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
