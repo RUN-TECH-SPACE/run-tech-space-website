@@ -41,15 +41,18 @@ function Events() {
 
         <div className='mt-12 grid gap-5 md:grid-cols-3 md:flex-row md:gap-10'>
           <img
-            src='/images/hackathon.png'
+            src='/images/tech.jpg'
             alt='hackathon'
-            className='order-1 col-span-2 h-full  w-full rounded-[20px] object-cover md:order-2 md:col-span-1 md:rounded-[50px]'
+            className='order-1 col-span-2 h-[200px]  w-full rounded-[20px] object-cover md:order-2 md:col-span-1 md:rounded-[50px]'
           />
 
           <div className='order-1 col-span-2 space-y-2'>
-            <p>
-              <span className='my-auto mr-2 inline-block h-2 w-2 rounded-full bg-[#D73B3B]'></span>
-              June 3rd, 2022
+            <p className='flex justify-between'>
+              <span>
+                <span className='my-auto mr-2 inline-block h-2 w-2 rounded-full bg-[#D73B3B]'></span>
+                June 3rd, 2022
+              </span>
+              <span className='text-[#D73B3B]'>Live</span>
             </p>
 
             <h3 className='text-xl font-semibold md:text-3xl'>
