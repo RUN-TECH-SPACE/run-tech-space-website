@@ -17,8 +17,9 @@ function ArtificialIntelligence() {
       <Navigation />
       <Hero
         heading='Artificial Intelligence & Data Science'
+        description="Every day, businesses utilize data and analytics to improve efficiencies, gain deeper operational insights, and ultimately earn more money. However, data science's significance extends far beyond the commercial world and is assisting in the resolution of some of humanity's most serious problems. Data science is being used for the better welfare of society, from helping health practitioners address problems more intelligently to fighting poverty, mitigating climate change, solving transportation issues, and lots more. Artificial Intelligence impacts our lives and the world around us."
         link='/join_us'
-        img='/images/frontend-stack.png'
+        img='/images/ai.png'
         ai
       />
       <main className='space-y-20'>
