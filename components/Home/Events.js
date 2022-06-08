@@ -48,11 +48,7 @@ function Events() {
 
           <div className='order-1 col-span-2 space-y-2'>
             <p className='flex justify-between'>
-              <span>
-                <span className='my-auto mr-2 inline-block h-2 w-2 rounded-full bg-[#D73B3B]'></span>
                 June 3rd, 2022
-              </span>
-              <span className='text-[#D73B3B]'>Live</span>
             </p>
 
             <h3 className='text-xl font-semibold md:text-3xl'>
